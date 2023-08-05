@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Main Page",
+        "link": "/"
+    },
+    {
+        "title": "All products",
+        "link": "/products/all"
+    },
+    {
+        "title": "All sales",
+        "link": "/sales"
+    }
+]

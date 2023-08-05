@@ -1,0 +1,56 @@
+.section {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 78px;
+}
+.title {
+    color: #2D2D2D;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 58.5px */
+    letter-spacing: 1.35px;
+}
+.sort_products_container {
+    display: flex;
+    align-items: center;
+    margin-top: 75px;
+}
+.sort_products_container h3 {
+    color: #2D2D2D;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 32.5px */
+    letter-spacing: 0.75px;
+}
+.price_fromTo {
+    display: flex;
+    align-items: center;
+    margin-right: 42px;
+    gap: 15px;
+}
+.price_fromTo input {
+    padding: 10px;
+    border: 1px solid #2D2D2D;
+}
+.price_fromTo input::placeholder {
+    color: #ACACAC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+}
+.sorted {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.sorted select {
+    padding: 10px;
+    color: #797979;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+}

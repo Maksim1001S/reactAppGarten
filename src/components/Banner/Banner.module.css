@@ -1,0 +1,44 @@
+.section {
+    background-color: #A1E2EB;
+    height: 86.8vh;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.bg_img {
+    background-image: url(../../assets/banner_bg.png);
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 20%;
+    padding-top: 8%;
+}
+.title {
+    color: #FFF;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%;
+}
+.title span {
+    font-size: 63px;
+    color: #FFF;
+}
+.btnLink_to_sale {
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    padding: 25px 97px;
+    border-radius: 13px;
+    background: linear-gradient(317deg, #5ECC5E -95%, rgba(255, 255, 255, 0.00) 104%);
+    margin-top: 55px;
+    display: inline-block;
+}

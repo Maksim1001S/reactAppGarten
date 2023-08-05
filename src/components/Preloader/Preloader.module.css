@@ -1,0 +1,84 @@
+.preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+.lds_heart {
+    position: relative;
+    background-color: #7BE47B;
+    width: 172px;
+    height: 172px;
+    border-radius: 100%;
+    display: flex;
+    align-items: end;
+    padding: 0px 0px 3px 2px;
+    overflow: hidden;
+    margin-right: 250px;
+    margin-top: 10px;
+  }
+  .lds_heart img {
+    width: 140px;
+    height: 140px;
+  }
+  .lds_heart {
+    animation: lds_heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  @keyframes lds_heart {
+    0% {
+      transform: scale(0.95);
+    }
+    5% {
+      transform: scale(1.1);
+    }
+    39% {
+      transform: scale(0.85);
+    }
+    45% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+
+
+
+
+  .lds_ring {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding-left: 180px;
+  }
+  .lds_ring_cont{
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    margin: 8px;
+    border: 8px solid #7BE47B;
+    border-radius: 50%;
+    animation: lds_ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #7BE47B transparent;
+  }
+  .lds_ring_cont div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  @keyframes lds_ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

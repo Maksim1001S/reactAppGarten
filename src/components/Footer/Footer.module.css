@@ -1,0 +1,97 @@
+.footer {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.map {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact h2 {
+    color: #2D2D2D;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+}
+.tel {
+    color: #2D2D2D;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 91px */
+}
+.social_media_container {
+    display: flex;
+    gap: 48px;
+}
+.social_media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.social_media h3 {
+    color: #2D2D2D;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 19.5px */
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 47px;
+}
+.address h2 {
+    color: #2D2D2D;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+}
+.address_link {
+    color: #2D2D2D;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px;
+}
+.line1 {
+    border-bottom: 2px solid #2D2D2D;
+}
+.line2 {
+    border-bottom: 2px solid #2D2D2D;
+}
+.working_hours {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.working_hours h3 {
+    color: #2D2D2D;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+}
+.working_hours p {
+    color: #2D2D2D;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 31.2px */
+}
