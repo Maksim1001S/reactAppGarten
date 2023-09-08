@@ -1,0 +1,118 @@
+.form {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border-radius: 21px;
+    border: 2px solid rgba(45, 45, 45, 0.48);
+}
+.form h2 {
+    color: #2D2D2D;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 45.5px */
+    letter-spacing: 1.05px;
+}
+.total_price_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+}
+.total_title {
+    color: #2D2D2D;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 36.4px */
+    letter-spacing: 0.84px;
+}
+.total_price {
+    color: #2D2D2D;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 41.6px */
+    letter-spacing: 0.96px;
+}
+.total_price span {
+    color: #2D2D2D;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.3px;
+}
+.form input {
+    border-radius: 20px;
+    border: 1px solid #7BE47B;
+    background: transparent;
+    padding: 21px 25px;
+    margin-top: 50px;
+
+    color: #7BE47B;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 31.2px */
+    letter-spacing: 0.72px;
+}
+.form input::placeholder {
+    color: #7BE47B;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 31.2px */
+    letter-spacing: 0.72px;
+}
+.form input:focus-visible {
+    outline: none;
+}
+.send_order_btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 17px;
+    background-color: #7BE47B;
+    padding: 20px 0px;
+    margin-top: 25px;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 42.9px */
+    letter-spacing: 0.99px;
+    transition: all 0.3s;
+}
+.send_order_btn:hover {
+    background-color: #3eb13e;
+}
+@media (max-width: 650px) {
+    .form {
+        width: 100%;
+    }
+}
+@media (max-width: 430px) {
+    .form h2 {
+        font-size: 28px;
+    }
+    .total_title {
+        font-size: 20px;
+    }
+    .total_price {
+        font-size: 28px;
+    }
+    .total_price span {
+        font-size: 10px;
+    }
+    .form input {
+        font-size: 20px;
+    }
+    .form input::placeholder {
+        font-size: 20px;
+    }
+    .send_order_btn {
+        font-size: 25px;
+    }
+}

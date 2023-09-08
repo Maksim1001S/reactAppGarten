@@ -17,6 +17,7 @@ import Footer from './components/Footer/Footer'
 import { getCategories } from './requests/categories_req'
 import Preloader from './components/Preloader/Preloader'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import BreadCrumbs from './components/BreadCrumbs/BreadCrumbs'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -42,9 +43,11 @@ const App = () => {
   if (products.status === "succeeded" && categories.status === "succeeded" && disProducts.status === "succeeded") {
     return (
       <div>
+
         <Navbar />
 
         <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path='/categories/all' element={<CategoriesPage />} />

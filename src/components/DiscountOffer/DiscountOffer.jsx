@@ -14,7 +14,7 @@ const DiscountOffer = () => {
             <h2 className={s.title_name}>Sale</h2>
             <Link className={s.title_button} to="/sales">all sales</Link>
         </div>
-        <ProductsContainer products_data={discountOfferProducts}/>
+        <ProductsContainer page_container={"sale_offer_container"} products_data={discountOfferProducts}/>
     </section>
   )
 }

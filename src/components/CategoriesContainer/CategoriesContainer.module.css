@@ -1,6 +1,21 @@
 .categories_container {
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(4, 23%);
-    grid-gap: 38px;
+    grid-template-columns: repeat(4, 23.2%);
+    grid-gap: 2.41%;
+    row-gap: 35px;
     margin-top: 53px;
+}
+
+
+@media (max-width: 840px) {
+    .categories_container{
+        grid-template-columns: repeat(3, 31.6%);
+    }
+}
+
+@media (max-width: 550px) {
+    .categories_container{
+        grid-template-columns: repeat(2, 48.5%);
+    }
 }

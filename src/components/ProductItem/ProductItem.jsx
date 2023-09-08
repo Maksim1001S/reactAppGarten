@@ -2,15 +2,18 @@ import React from 'react'
 import s from "./ProductItem.module.css"
 import AddToCartIcon from '../../icons/AddToCartIcon'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../store/slice/cartSlice'
 
 const ProductItem = ({title, image, id, price, discont_price}) => {
+    const dispatch = useDispatch()
   return (
     <li className={s.products_item}>
         <div className={s.overlay}>
-            <button className={s.add_to_cart_btn}>
+            <div onClick={() => dispatch(addToCart({title, image, id, price, discont_price}))} className={s.add_to_cart_btn}>
                 <AddToCartIcon />
                 <p>Add to cart</p>
-            </button>
+            </div>
         </div>
         <img src={`https://gartenservice.onrender.com${image}`} alt={title} />
         <Link to={`/products/${id}`}>
@@ -30,7 +33,7 @@ const ProductItem = ({title, image, id, price, discont_price}) => {
                     }
                     
                 </div>
-            <h3 className={s.item_title}>{title}</h3>
+                <h3 className={s.item_title}>{title}</h3>
             </div>
         </Link>   
     </li>

@@ -7,6 +7,7 @@
     display: flex;
     gap: 50px;
     align-items: center;
+    padding: 0 20px;
 }
 .title_name {
     color: #2D2D2D;
@@ -28,5 +29,59 @@
     letter-spacing: 0.36px;
     padding: 2px 10px;
     margin-top: 9px;
+    transition: all 0.4s;
+}
+.title_button:hover {
+    background-color: #7BE47B;
+    color: #fff;
+}
+@media (max-width: 840px) {
+    .title {
+        gap: 40px;
+    }
+    .title_name {
+        font-size: 38px;
+    }
+    .title_button {
+        font-size: 17px;
+        padding: 2px 10px;
+    }
+}
+@media (max-width: 680px) {
+    .title {
+        gap: 40px;
+    }
+    .title_name {
+        font-size: 34px;
+    }
+    .title_button {
+        font-size: 15px;
+        padding: 2px 10px;
+        border-width: 1px;
+    }
+}
+@media (max-width: 550px) {
+    .title {
+        gap: 30px;
+    }
+    .title_name {
+        font-size: 30px;
+    }
+    .title_button {
+        font-size: 12px;
+        padding: 2px 10px;
+    }
+}
+@media (max-width: 370px) {
+    .title {
+        gap: 20px;
+    }
+    .title_name {
+        font-size: 25px;
+    }
+    .title_button {
+        font-size: 11px;
+        padding: 2px 10px;
+    }
 }
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -6,8 +7,12 @@
   list-style-type: none;
   color: #2D2D2D;
   font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
 }
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
+}
+html, body {
+  overflow-x: hidden;
 }

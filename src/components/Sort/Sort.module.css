@@ -1,0 +1,217 @@
+.sort_products_container {
+    display: flex;
+    align-items: center;
+    margin-top: 75px;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.sort_products_container h3 {
+    color: #2D2D2D;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 32.5px */
+    letter-spacing: 0.75px;
+}
+.price_fromTo {
+    display: flex;
+    align-items: center;
+    margin-right: 42px;
+    gap: 15px;
+}
+.price_fromTo button {
+    cursor: pointer;
+    color: #7BE47B;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.75px;
+    background-color: transparent;
+    border: 1.5px solid #7BE47B;
+    padding: 4px 6px;
+    transition: all 0.2s ease-out;
+}
+.price_fromTo button:hover {
+    color: #fff;
+    background-color: #7BE47B;
+}
+.price_fromTo_input {
+    padding: 10px;
+    border: 1px solid #2D2D2D;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+}
+.price_fromTo_input:focus-visible {
+    outline: none;
+}
+.price_fromTo_input::placeholder {
+    color: #ACACAC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+}
+.input_error {
+    border: 2px solid red;
+}
+.discounted {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 98px;
+    gap: 24px;
+}
+.discounted input {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.checkbox_custom {
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #7BE47B;
+}
+.checkbox_custom::after {
+    right: 6px;
+    top: -5px;
+    content: "\2713";
+    position: absolute;
+    font-size: 35px;
+    color: #fff;
+    display: none;
+}
+.discounted input:checked ~ .checkbox_custom {
+    background-color: #7BE47B;
+    border: none;
+}
+.discounted input:checked ~ .checkbox_custom::after {
+    display: block;
+}
+
+.sorted {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.sorted select {
+    padding: 10px;
+    color: #797979;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+}
+.sorted select:focus-visible {
+    outline: none;
+}
+
+@media (max-width: 1340px) {
+    .discounted {
+        margin-right: 0;
+    }
+    .price_fromTo {
+        margin-right: 0;
+    }
+    .sort_products_container h3 {
+        font-size: 20px;
+    }
+    .price_fromTo_input {
+        padding: 7px;
+        font-size: 14px;
+    }
+    .price_fromTo_input::placeholder {
+        font-size: 14px;
+    }
+    .price_fromTo button {
+        font-size: 15px;
+    }
+    .discounted input {
+        width: 30px;
+        height: 30px;
+    }
+    .checkbox_custom {
+        width: 30px;
+        height: 30px;
+    }
+    .checkbox_custom::after {
+        right: 3px;
+        top: -5px;
+        content: "\2713";
+        position: absolute;
+        font-size: 30px;
+        color: #fff;
+        display: none;
+    }
+    .sorted {
+        gap: 25px;
+    }
+    .sorted select {
+        font-size: 14px;
+    }
+    .sorted option {
+        padding: 1px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 1050px) {
+    .sort_products_container h3 {
+        font-size: 15px;
+    }
+    .price_fromTo_input {
+        padding: 5px;
+        font-size: 12px;
+        width: 100px;
+    }
+    .sorted select {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+@media (max-width: 800px) {
+    .sorted {
+        gap: 15px;
+    }
+    .discounted {
+        gap: 15px;
+    }
+    .price_fromTo {
+        gap: 10px;
+    }
+    .discounted input {
+        width: 20px;
+        height: 20px;
+    }
+    .checkbox_custom {
+        width: 20px;
+        height: 20px;
+    }
+    .checkbox_custom::after {
+        right: 3px;
+        top: -5px;
+        content: "\2713";
+        position: absolute;
+        font-size: 20px;
+        color: #fff;
+        display: none;
+    }
+}
+@media (max-width: 760px) {
+    .sort_products_container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 15px;
+    }
+}
+@media (max-width: 350px) {
+    .price_fromTo {
+        gap: 5px;
+    }
+}

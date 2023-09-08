@@ -13,6 +13,8 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 47px;
+    padding: 0 50px;
 }
 .contact {
     display: flex;
@@ -54,7 +56,6 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-bottom: 47px;
 }
 .address h2 {
     color: #2D2D2D;
@@ -94,4 +95,88 @@
     font-style: normal;
     font-weight: 600;
     line-height: 130%; /* 31.2px */
+}
+@media (max-width: 1240px) {
+    .contact {
+        gap: 20px;
+    }
+    .contact h2 {
+        font-size: 30px;
+    }
+    .tel {
+        font-size: 50px;
+    }
+    .social_media_container {
+        gap: 25px;
+    }
+    .address {
+        gap: 20px;
+    }
+    .address h2 {
+        font-size: 30px;
+    }
+    .address_link {
+        font-size: 30px;
+    }
+    .line1 {
+        border-bottom: 1px solid #2D2D2D;
+    }
+    .line2 {
+        border-bottom: 1px solid #2D2D2D;
+    }
+    .working_hours p {
+        font-size: 20px;
+    }
+}
+@media (max-width: 920px) {
+    .contact h2 {
+        font-size: 25px;
+    }
+    .tel {
+        font-size: 30px;
+    }
+    .social_media_container {
+        gap: 25px;
+    }
+    .social_media h3{
+        font-size: 13px;
+    }
+    .social_media svg{
+        width: 40px;
+    }
+    .address h2 {
+        font-size: 25px;
+    }
+    .address_link {
+        font-size: 25px;
+    }
+    .working_hours h3 {
+        font-size: 15px;
+    }
+    .working_hours p {
+        font-size: 18px;
+    }
+}
+@media (max-width: 720px) {
+    .container {
+        flex-direction: column;
+        gap: 60px;
+        padding: 0 20px;
+    }
+    .contact {
+        align-items: center;
+    }
+    .contact h2 {
+        font-size: 35px;
+    }
+    .address {
+        align-items: center;
+    }
+    .address h2 {
+        font-size: 35px;
+    }
+    .address_link {
+        text-align: center;
+        font-size: 23px;
+    }
 }

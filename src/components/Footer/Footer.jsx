@@ -5,7 +5,7 @@ import WhatsAppIcon from '../../icons/WhatsAppIcon'
 
 const Footer = () => {
   return (
-    <footer className={s.footer}>
+    <footer className={s.footer} id='contact'>
         <address className={s.container}>
             <div className={s.contact}>
                 <h2>Contact</h2>

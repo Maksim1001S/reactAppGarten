@@ -4,25 +4,41 @@
     max-width: 1440px;
     margin: 0 auto;
     justify-content: space-between;
-    padding: 19px 28px 0px 28px;
+    background-color: #FFF;
+    padding: 19px 28px 15px 28px;
+    position: relative;
+    z-index: 1000;
+}
+.logoAndBtn_contanier {
+    display: flex;
+    gap: 60px;
+    align-items: center;
 }
 .logo_container {
     background-color: #7BE47B;
     width: 72px;
     height: 72px;
-    display: inline-block;
     border-radius: 100%;
     display: flex;
     align-items: end;
     padding: 0px 0px 3px 2px;
     overflow: hidden;
-    margin-right: 60px;
+    transition: background-color 0.3s;
+}
+.logo_container:hover {
+    background-color: #7be47bc7;
+}
+.logo_container img {
+    transform: rotate(0);
+    transition: transform 0.3s;
+}
+.logo_container:hover img {
+    transform: rotate(30deg);
 }
 .btn_catalog {
-    margin-right: 36%;
-    display: inline-flex;
-    height: 50px;
-    padding: 14px 30px 15px 30px;
+    display: flex;
+    align-items: center;
+    padding: 15px 28px;
     border-radius: 5px;
     background: #7BE47B;
     color: #FFF;
@@ -30,22 +46,256 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    border: 2px solid #7BE47B;
+    transition: all 0.3s ease-out;
+}
+.btn_catalog:hover {
+    background-color: transparent;
+    color: #7BE47B;
 }
 .navlinks {
     display: flex;
     gap: 44px;
-    margin-right: 95px;
-    cursor: pointer;
-    color: #2D2D2D;
+}
+.navlink {
+    position: relative;
+    color: #2d2d2d;
     font-size: 20px;
+    cursor: pointer;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+    transition: all 0.3s;
+}
+.navlink::after {
+    position: absolute;
+    content: "";
+    top: 109%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #7BE47B;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 0.3s;
+}
+.navlink:hover::after, .navlink:hover{
+    color: #7BE47B;
+    transform: scaleX(1);
 }
 
 .img {
     display: block;
 }
 .cart {
+    position: relative;
     cursor: pointer;
+}
+.cart span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -7px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 50%;
+    background-color: #7BE47B;
+}
+.cart path {
+    transition: all 0.3s;
+}
+.cart:hover path {
+    fill: #7BE47B;
+}
+.mobile_menu_popup {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.navbar_toggler {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+.navbar_toggler_line {
+    position: initial;
+    height: 3px;
+    width: 30px;
+    background-color: #7BE47B;
+    transition: transform 0.4s ease-out;
+}
+
+
+@media (max-width: 1370px) {
+    .header {
+        box-shadow: 0px 0px 7px #7BE47B;
+    }
+}
+@media (max-width: 1245px) {
+    .btn_catalog {
+        font-size: 17px;
+        padding: 14px 20px 15px 20px;
+    }
+    .navlinks {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navlinks {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 30px;
+        font-size: 20px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-out;
+        z-index: 10;
+    }
+    .navlinks.active {
+        transform: translateX(0);
+    }
+    .navbar_toggler {
+        display: flex;
+    }
+    .navbar_toggler.active {
+        position: relative;
+        height: 30px;
+        width: 30px;
+    }
+    .navbar_toggler.active .navbar_toggler_line {
+        position: absolute;
+        top: 40%;
+        right: 0px;
+    }
+    .navbar_toggler.active .navbar_toggler_line:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .navbar_toggler.active .navbar_toggler_line:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    .navbar_toggler.active .navbar_toggler_line:nth-child(2) {
+        transform: rotate(-45deg);
+    }
+}
+
+@media (max-width: 700px) {
+    .logo_container {
+        width: 50px;
+        height: 50px;
+        padding: 9px 9px 0px 0px;
+    }
+    .logo_container img {
+        width: 45px;
+        height: 45px;
+    }
+    .btn_catalog {
+        font-size: 14px;
+        padding: 9px 17px 9px 17px;
+    }
+    .logoAndBtn_contanier {
+        gap: 30px;
+    }
+    .mobile_menu_popup {
+        gap: 30px;
+    }
+    .navlinks {
+        font-size: 16px;
+        padding: 22px;
+    }
+}
+@media (max-width: 500px) {
+    .logo_container {
+        width: 40px;
+        height: 40px;
+        padding: 0px 0px 1px 2px;
+    }
+    .logo_container img {
+        width: 33px;
+        height: 33px;
+    }
+    .btn_catalog {
+        font-size: 10px;
+        padding: 7px 13px 7px 13px;
+    }
+    .logoAndBtn_contanier {
+        gap: 20px;
+    }
+    .cart svg{
+        height: 22px;
+        width: 20px;
+    }
+    .cart span {
+        top: -5px;
+        right: -7px;
+        width: 15px;
+        height: 15px;
+        font-size: 11px;
+    }
+    .navbar_toggler_line {
+        height: 2px;
+        width: 25px;
+    }
+    .navbar_toggler.active {
+        width: 25px;
+        height: 25px;
+    }
+    .header {
+        padding: 10px;
+    }
+    .navlinks {
+        font-size: 12px;
+        padding: 18px;
+    }
+}
+@media (max-width: 400px) {
+    .header {
+        padding: 9px;
+    }
+    .logo_container {
+        width: 30px;
+        height: 30px;
+        padding: 0px 0px 1px 1px;
+    }
+    .logo_container img {
+        width: 25px;
+        height: 25px;
+    }
+    .btn_catalog {
+        font-size: 8px;
+        padding: 4px 10px 4px 10px;
+    }
+    .cart svg{
+        height: 17px;
+        width: 15px;
+    }
+    .cart span {
+        top: -5px;
+        right: -7px;
+        width: 12px;
+        height: 12px;
+        font-size: 8px;
+    }
+    .navbar_toggler_line {
+        height: 1px;
+        width: 19px;
+    }
+    .navbar_toggler.active {
+        width: 19px;
+        height: 19px;
+    }
+    .navlinks {
+        font-size: 10px;
+        padding: 16px;
+        gap: 20px;
+    }
+
 }
