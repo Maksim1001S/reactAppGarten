@@ -8,6 +8,7 @@ import OrderDetailsForm from '../../components/OrderDetailsForm/OrderDetailsForm
 
 const CartPage = () => {
   const cart = useSelector(state => state.cart.cart)
+  console.log(cart);
   const total_price = cart.reduce((acc, {price, count, discont_price}) => acc + (discont_price ? discont_price : price)*count, 0).toFixed(2)
   return (
     <section className={s.cart_section}>

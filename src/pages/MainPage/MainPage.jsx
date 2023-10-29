@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Banner from '../../components/Banner/Banner'
 import Catalog from '../../components/Catalog/Catalog'
 import GetDiscount from '../../components/GetDiscount/GetDiscount'

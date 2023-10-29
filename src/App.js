@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "./App.css"
 import Navbar from './components/Navbar/Navbar'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import MainPage from "./pages/MainPage/MainPage"
 import CategoriesPage from "./pages/CategoriesPage/CategoriesPage"
 import AllProductsPage from "./pages/AllProductsPage/AllProductsPage"
@@ -17,13 +17,16 @@ import Footer from './components/Footer/Footer'
 import { getCategories } from './requests/categories_req'
 import Preloader from './components/Preloader/Preloader'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
-import BreadCrumbs from './components/BreadCrumbs/BreadCrumbs'
+import ProfilePage from './pages/ProfilePage/ProfilePage'
 
 const App = () => {
+  const location = useLocation()
   const dispatch = useDispatch()
   const products = useSelector(state => state.products)
   const categories = useSelector(state => state.categories)
   const disProducts = useSelector(state => state.disProducts)
+
+  const isAdminRoute = location.pathname === "/admin";
   useEffect(() => {
     dispatch(getCategories())
   }, [])
@@ -41,6 +44,12 @@ const App = () => {
 
 
   if (products.status === "succeeded" && categories.status === "succeeded" && disProducts.status === "succeeded") {
+    if (isAdminRoute) {
+      console.log('Yes');
+      return (
+        <ProfilePage />
+      )
+    }
     return (
       <div>
 
