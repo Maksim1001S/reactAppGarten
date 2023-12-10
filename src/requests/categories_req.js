@@ -1,13 +1,13 @@
-import axios from "axios"
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { base_url } from "./baseUrl";
-
+import { get, ref } from "firebase/database";
+import { db } from "../firebaseConfig";
 
 export const getCategories = createAsyncThunk(
-    "categories/getCategories",
-    async () => {
-        const res = await axios.get(`${base_url}/categories/all`);
-        console.log(res.data);
-        return res.data;
-    }
+  "categories/getCategories",
+  async () => {
+    const snapshot = await get(ref(db, "categories"));
+    const data = snapshot.val();
+    data.shift();
+    return data;
+  }
 );
