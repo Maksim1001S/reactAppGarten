@@ -1,129 +1,130 @@
 .section {
-    background-color: #A1E2EB;
-    min-height: 780px;
-    height: 86.8vh;
-    max-width: 1920px;
-    margin: 0 auto;
-    margin-top: 40px;
+  background-color: #a1e2eb;
+  min-height: 780px;
+  height: 86.8vh;
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
+
 .bg_img {
-    background-image: url(../../assets/banner_bg.png);
-    background-position-y: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
+  background-image: url(../../assets/banner_bg.png);
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding-left: 20%;
-    padding-top: 8%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 20%;
+  padding-top: 8%;
 }
 .title {
-    color: #FFF;
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 130%;
+  color: #fff;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 130%;
 }
 .title span {
-    font-size: 63px;
-    color: #FFF;
+  font-size: 63px;
+  color: #fff;
 }
 .btnLink_to_sale {
-    position: relative;
-    color: #FFF;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-    padding: 25px 97px;
-    border-radius: 13px;
-    background: linear-gradient(317deg, #5ECC5E -95%, rgba(255, 255, 255, 0.00) 104%);
-    margin-top: 55px;
-    display: inline-block;
-    background-color: none;
-    transition: all 0.3s ease-out ;
+  position: relative;
+  color: #fff;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  padding: 25px 97px;
+  border-radius: 13px;
+  background: linear-gradient(
+    317deg,
+    #5ecc5e -95%,
+    rgba(255, 255, 255, 0) 104%
+  );
+  margin-top: 55px;
+  display: inline-block;
+  background-color: none;
+  transition: all 0.3s ease-out;
 }
 .btnLink_to_sale:hover {
-    background-color: #84f68496;
-    scale: 1.1;
+  background-color: #84f68496;
+  scale: 1.1;
 }
 
 @media (max-width: 1470px) {
-    .container {
-        padding-left: 25%;
-        padding-top: 14%;
-    }
+  .container {
+    padding-left: 25%;
+    padding-top: 14%;
+  }
+}
+@media (max-width: 1370px) {
+  .section {
+    margin-top: 0;
+  }
 }
 @media (max-width: 1200px) {
-    .container {
-        padding-left: 34%;
-        padding-top: 17%;
-    }
-    .title {
-        font-size: 60px;
-    }
-    .title span {
-        font-size: 50px;
-    }
-    .bg_img {
-        background-size: 130%;
-    }
+  .container {
+    padding-left: 34%;
+    padding-top: 17%;
+  }
+  .title {
+    font-size: 60px;
+  }
+  .title span {
+    font-size: 50px;
+  }
+  .bg_img {
+    background-size: 130%;
+  }
 }
 @media (max-width: 980px) {
-    .bg_img {
-        background-size: 160%;
-        background-position-x: center;
-    }
-    .container {
-        padding-top: 20%;
-    }
+  .bg_img {
+    background-size: 160%;
+    background-position-x: center;
+  }
+  .container {
+    padding-top: 20%;
+  }
 }
 @media (max-width: 700px) {
-    .bg_img {
-        background-image: none;
-    }
-    .section {
-        background-color: #fff;
-        min-height: 300px;
-        height: auto;
-        padding-bottom: 50px;
-    }
-    .container {
-        padding-left: 34px;
-        padding-top: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 90px;
-        align-items: start;
-    }
-    .title {
-        color: #5ECC5E;
-        border-left: 4px solid #5ECC5E;
-        padding-left: 10px;
-        padding-top: -30px;
-        line-height: 50px;
-
-    }
-    .title span {
-        color: #a1eea1;
-        line-height: 0;
-    }
-    .btnLink_to_sale {
-        font-size: 35px;
-        background: linear-gradient(317deg, #5ECC5E 23%, rgba(255, 255, 255, 0.00) 104%);
-        margin-top: 0px;
-    }
+  .bg_img {
+    background-size: cover;
+    background-position-x: center;
+  }
+  .container {
+    padding-left: 30%;
+    padding-top: 8%;
+    height: 300px;
+  }
+  .section {
+    min-height: 300px;
+    height: auto;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .title span {
+    font-size: 30px;
+  }
+  .btnLink_to_sale {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
 }
-@media (max-width: 500px) {
-    .container {
-        margin-top: 50px;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 90px;
-        align-items: center;
-    }
+@media (max-width: 572px) {
+  .bg_img {
+    background-size: 572px;
+  }
 }

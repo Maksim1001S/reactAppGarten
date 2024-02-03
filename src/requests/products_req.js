@@ -13,9 +13,12 @@ export const getProducts = createAsyncThunk(
       const snapshot = await get(dbRef);
 
       const data = snapshot.val();
-      data.shift();
+      const productsArray = Object.keys(data).map((key) => ({
+        ...data[key],
+        id: key,
+      }));
 
-      return data;
+      return productsArray;
     } catch (error) {
       console.error("Error fetching data from Firebase:", error);
       throw error;
